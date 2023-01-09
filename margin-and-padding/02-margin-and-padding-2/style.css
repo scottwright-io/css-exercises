@@ -20,8 +20,7 @@ body {
 
 .content {
   background: #e3f4ff;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 8px;
   margin-bottom: 8px;
 }
 
