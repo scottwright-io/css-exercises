@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Not pixel perfect but close enough. */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -19,7 +21,10 @@ body {
   background: white;
   width: 480px;
   border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+  display: flex; /* adds flex to align items within div */
+  gap: 16px; /* adds space between icon & text */
+  padding: 16px; /* adds padding around all edges */
 }
 
 .icon {
@@ -33,6 +38,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px; /* pushes icon down to line up with header text */
+  flex-shrink: 0; /* Stops icon from becoming squashed */
 }
 
 .close-button {
@@ -57,10 +64,25 @@ button.continue {
   background: royalblue;
   border: 1px solid royalblue;
   color: white;
+  margin-left: 10px; /* aligns buttons with text */
 }
 
 button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+
+/* styles and aligns header text */
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+/* adds space between text & buttons */
+.text {
+  margin-bottom: 16px;
+  margin-left: 10px;
 }
