@@ -1,28 +1,92 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   min-height: 100vh;
+  /* initialise flexbox on page */
+  display: flex;
+  /* switch to column */
+  flex-direction: column;
 }
 
 .header {
-  height: 72px;
   background: darkmagenta;
   color: white;
+  /* make header text bolder */
+  font-weight: 900;
+  font-size: 32px;
+  /* adds padding around text */
+  padding: 16px;
+  /* positions header and makes responsive */
+  display: flex;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  /* fix width to 300px */
+  width: 300px;
+  /* add padding */
+  padding: 16px;
+  background: royalblue;
+  /* fixes position width of sidebar */
+  flex-shrink: 0;
+}
+
+ul {
+  /* removes bullet point styling from text */
+  list-style-type: none;
+  /* padding and spacing to position links in sidebar*/
+  margin: 0;
+  padding: 0;
+}
+
+/* add spacing between link text */
+li {
+  margin-bottom: 16px;
+}
+
+a {
+  /* add correct font */
+  font-size: 24px;
+  /* removes text underline */
+  text-decoration: none;
+  color: #eee;
+}
+
+/* wraps the card elements responsively */
+.card-container {
+  /* makes cards responsive when resizing */
+  display: flex;
+  flex-wrap: wrap;
+  /* adds spacing around cards */
+  padding: 30px;
+}
+
+.card {
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  /* add required padding */
+  padding: 32px;
+  /* add gap between cards */
+  margin: 16px;
+  /* fix width */
+  width: 300px;
+  flex: 0 1 auto;
 }
 
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
-}
-
-.sidebar {
-  width: 300px;
-  background: royalblue;
-}
-
-.card {
-  border: 1px solid #eee;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
-  border-radius: 4px;
+  /* add flex  */
+  display: flex;
+  /* centres text in footer bar */
+  align-items: center;
+  /*  centres text on page */
+  justify-content: center;
 }
